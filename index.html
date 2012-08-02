@@ -1,0 +1,80 @@
+<html>
+	<title>Dan's Website</title>
+	<head>
+			
+		<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		<script type="text/javascript" src="jquery-1.2.3.pack.js"></script>
+		<script type="text/javascript">
+			var pageUrl = new Array();			
+			pageUrl[1] = "./tab_info/tab1.html";
+			pageUrl[2] = "./tab_info/tab2.html";
+			pageUrl[3] = "./tab_info/tab3.html";
+			pageUrl[4] = "./tab_info/tab4.html";		
+		
+			function loadTab(id)
+			{
+				if (pageUrl[id].length > 0)
+				{
+					$("#preloader").show("fast");
+					$.ajax(
+			        {
+			            url: pageUrl[id], 
+			            cache: false,
+			            success: function(message) 
+			            {			            	
+			                $("#tabcontent").empty().append(message);
+			                $("#preloader").hide("fast");             
+			            }
+			        });			        
+				}
+			}
+			
+			
+			$(document).ready(function()
+			{
+				$("#preloader").hide();
+				loadTab(1);
+				$("#tab1").click(function() { loadTab(1); });
+				$("#tab2").click(function() { loadTab(2); });
+				$("#tab3").click(function()	{ loadTab(3); });
+				$("#tab4").click(function() { loadTab(4); });
+			});
+		</script>
+	</head>
+	<body>
+		<div class="title">
+		<h1>Dan's Website</h1>
+		</div>
+
+		<!--Tab Selection-->
+		<div class="container">
+		
+			<div class="navcontainer">
+				<ul>
+					<div class="divider"></div>
+					<li><a id="tab1" href="#">About Me</a></li>
+					<div class="divider"></div>
+					<li><a id="tab2" href="#">Contact Information</a></li>													<div class="divider"></div>
+					<li><a id="tab3" href="#">Upcoming Additions</a></li>
+					<div class="divider"></div>
+					<li><a id="tab4" href="#">Previous Projects</a></li>
+					<div class="divider"></div>
+					<li><a id="Resume" href="./Resume.pdf">Resume (PDF)</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div id="line2"></div>	
+		<div class="content_holder">
+			<div id="tabcontent">
+			<div id="preloader">
+				<img src="loading.gif" align="absmiddle">				
+			</div>
+			
+			</div>
+					
+		</div>
+		<!--<div class="footer">Copyright Daniel Langridge 2011</div>-->
+		</div>
+	   </body>
+</html>
