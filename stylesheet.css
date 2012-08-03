@@ -2,7 +2,7 @@ h1
 			{
 				display: inline;
 				font-size: 40px;
-				color: black;
+				color: #2e3037;
 				font: Trebuchet;
 				#text-shadow: 5px 5px 5px #888888;
 			}
@@ -106,19 +106,33 @@ body
 			}
 			#tabcontent
 			{
-				width: 800px;
+				width: 600px;
 				color: #595959;
+        float: left;
 				background-color: #f5f5f5;
 				min-height: 300px;
 				padding-top: 80px;
-				padding-left: 10px;
-				padding-right: 10px;
-				padding-bottom: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-bottom: 20px;
 				#border-radius: 25px;
 				#box-shadow: 5px 5px 5px #888888;
 				margin: 0 auto;
 			}
-			#preloader
+      .sidebar_container
+      {
+        padding: 5px;
+      }
+			.sidebar
+      {
+        width: 340px;
+        min-height: 300px;
+        float: right;
+        display: inline;
+        background-color: #f5f5f5;
+        border: 1px solid grey;
+      }
+      #preloader
 			{
 				#position: relative;
 				#top: 50px;
