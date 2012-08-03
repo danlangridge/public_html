@@ -10,7 +10,8 @@
 			pageUrl[2] = "./tab_info/tab2.html";
 			pageUrl[3] = "./tab_info/tab3.html";
 			pageUrl[4] = "./tab_info/tab4.html";		
-		
+      pageUrl[5] = "./tab_info/tab5.html";
+      pageUrl[6] = "./tab_info/tab6.html";		
 			function loadTab(id)
 			{
 				if (pageUrl[id].length > 0)
@@ -38,6 +39,8 @@
 				$("#tab2").click(function() { loadTab(2); });
 				$("#tab3").click(function()	{ loadTab(3); });
 				$("#tab4").click(function() { loadTab(4); });
+				$("#tab5").click(function() { loadTab(5); });
+				$("#tab6").click(function() { loadTab(6); });
 			});
 		</script>
 	</head>
@@ -52,7 +55,7 @@
 			<div class="navcontainer">
 				<ul>
 					<div class="divider"></div>
-					<li><a id="tab1" href="#">About Me</a></li>
+					<li><a id="tab1" href="#">Blog</a></li>
 					<div class="divider"></div>
 					<li><a id="tab2" href="#">Contact Information</a></li>													<div class="divider"></div>
 					<li><a id="tab3" href="#">Upcoming Additions</a></li>
@@ -60,6 +63,10 @@
 					<li><a id="tab4" href="#">Previous Projects</a></li>
 					<div class="divider"></div>
 					<li><a id="Resume" href="./Resume.pdf">Resume (PDF)</a></li>
+					<div class="divider"></div>
+					<li><a id="tab5" href="#">WebGL Experiments</a></li>
+					<div class="divider"></div>
+					<li><a id="tab6" href="#">Resources</a></li>
 				</ul>
 			</div>
 
